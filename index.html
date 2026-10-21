@@ -40,8 +40,9 @@ kbd{font:inherit;font-weight:600;color:var(--ink);background:var(--panel);border
 .pad button:active{background:var(--accent);color:#fff}
 @media (pointer:coarse),(max-width:700px){
   .pad{display:grid}.keys{display:none}
-  .game{grid-template-columns:1fr 1fr;grid-template-areas:"board board" "left right" "pad pad";gap:14px}
-  #board{height:min(52vh,540px)}
+  .game{grid-template-columns:1fr 1fr;grid-template-areas:"board board" "pad pad" "left right";gap:12px;padding-top:12px}
+  #board{height:min(max(260px,calc(100vh - 210px)),540px);height:min(max(260px,calc(100dvh - 210px)),540px)}
+  .pad button{padding:.8em 0}
   h1{font-size:2rem;margin-bottom:10px}
 }
 </style>
